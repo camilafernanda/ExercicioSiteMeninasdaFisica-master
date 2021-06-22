@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+	<!-- Principal CSS do Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <!-- Estilos customizados para esse template -->
+    <link href="CSS2/form-validation.css" rel="stylesheet">
+	<link href="CSS2/cadPaciente.css" rel="stylesheet">
+	<link rel="icon" href="img/Icones/logoKdp.png">
+    
+	<title>Kidopi | Cadastro Pacientes</title>
+	
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+	<link href="signin.css" rel="stylesheet">
+  </head>
+  
+ <body>
+ 
+ <header>
+ <div class="fixed-top">
+   <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-info p-4">
+      <h5 class="text-white h4">Menu</h5>
+	  <a class="nav-item nav-link active" href="index.html">Página Inicial</a>
+      <a class="nav-item nav-link" href="cadPaciente.html">Cadastro de Pacientes<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="consPaciente.html">Consulta de Pacientes</a>
+    </div>
+   </div>
+  <nav class="navbar navbar-dark bg-info" style="background-color: #008B8B">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+ </div>
+ </header>
+ 
+ <main class="topo" role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Cadastro de Pacientes</h1>
+      <p class="lead text-muted">Preencha todos os campos corretamente e confirme as informações para efetuar o cadastro.</p>
+    </div>
+  </section>
+  </main>
+  
+  <div class="container">
+ <form class="needs-validation" method="post" action="">
+ <div class="form-groupid">
+  <div class="col-md-6 mb-3">
+    <label for="exampleInputid" class="col-sm-2 col-form-label">ID</label>
+    <input class="form-control"  type="text" value="" id="ID" readonly>
+	</div>
+  </div>
+  <div class="form-groupnome">
+  <div class="col-md-6 mb-3">
+    <label for="exampleInputNome" class="col-sm-2 col-form-label">Nome</label>
+    <input class="form-control" type="text" id="Nome" placeholder="Maria dos Santos" required>
+	<div class="invalid-feedback">Por favor, insira um nome válido.</div>
+	</div>
+  </div>
+  <div class="form-groupidade">
+  <div class="col-md-6 mb-3">
+    <label for="exampleInputIdade" class="col-sm-2 col-form-label">Idade</label>
+    <input class="form-control" type="number" min="0" id="Idade" placeholder="37" required>
+	<div class="invalid-feedback">Por favor, insira uma idade válida.</div>
+	</div>
+  </div>
+  <div class="form-groupsexo">
+  <div class="col-md-6 mb-3">
+  <label for="exampleInputSexo" class="col-sm-2 col-form-label">Sexo</label>
+  <select class="form-control">
+    <option value="1" id="sexo">Masculino</option>
+    <option value="2" id="sexo">Feminino</option>
+	<div class="invalid-feedback">Por favor, selecione um sexo.</div>
+  </select>
+  </div>
+  </div>
+  <div class="form-groupcheck">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    <label for="exampleCheck1">Todas as informações acima estão corretas.</label>
+	<div class="invalid-feedback">É obrigatório afirmar que todas as informações estão corretas.</div>
+  </div>
+  <div class="groupbutton">
+  <button type="submit" class="btn btn-outline-info">Cadastrar Paciente</button>
+  <a class="btn btn-outline-info" href="consPaciente.html" role="button">Consultar Pacientes</a>
+  </div>
+ </form>
+ </div>
+
+    <footer class="container">        
+      <p class="float-right"><a href="#">Voltar ao topo</a></p>
+      <p>Desenvolvido por Kidopo Soluções em Informática Médica &middot; <a target="_blank" href="https://kidopi.com.br/" >Entrar em Contato</a> &middot;</a></p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	
+    <script src="js/vendor/holder.min.js">
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+
+var forms = document.getElementsByClassName('needs-validation');
+
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+</script>
+  </body>
+</html>
+
+

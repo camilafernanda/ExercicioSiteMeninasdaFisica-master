@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="icon" href="img/Icones/logoKdp.png">
+	<link href="CSS2/consPaciente.css" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+	
+	<script>
+      var baseurl = "http://kidopilabs.com.br/exercicio/api/pacientes";
+      function CarregaPacientes(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET",baseurl + "/all",true);
+        xmlhttp.onreadystatechange = function() {
+          if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
+            var pacientes = JSON.parse(xmlhttp.responseText);
+            var tbltop = `<table>
+			    <tr><th>id</th><th>Nome</th><th>Idade</th><th>Sexo</th></tr>`;
+            var main ="";
+            for (i = 0; i < pacientes.length; i++){
+              main += "<tr><td>"+pacientes[i].id+"</td><td>"+pacientes[i].nome+"</td><td>"+pacientes[i].idade+"</td><td>"+pacientes[i].sexo+"</td></tr>";
+            }
+            var tblbottom = "</table>";
+            var tbl = tbltop + main + tblbottom;
+            document.getElementById("tabela").innerHTML = tbl;
+          }
+        };
+        xmlhttp.send();
+      }
+      window.onload = function(){
+        CarregaPacientes();
+      }
+    </script>
+	
+    <title>Kidopi | Consulta Paciente</title>
+	
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
+    <!-- Bootstrap core CSS -->
+   <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  
+ <body>
+ 
+ <header>
+ <div class="fixed-top">
+   <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-info p-4">
+      <h5 class="text-white h4">Menu</h5>
+	  <a class="nav-item nav-link active" href="index.html">Página Inicial</a>
+      <a class="nav-item nav-link" href="cadPaciente.html">Cadastro de Pacientes<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="consPaciente.html">Consulta de Pacientes</a>
+    </div>
+   </div>
+  <nav class="navbar navbar-dark bg-info" style="background-color: #008B8B">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+ </div>
+ </header>
+ 
+ <main class="topo" role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Consulta de Pacientes</h1>
+      <p class="lead text-muted">Para mais informações sobre um paciente clique em seu código. Para pesquisar um paciente especifico, digite seu código ou nome na barra abaixo.</p>
+    </div>
+  </section>
+  </main>
+ 
+ 
+ <form class="busca">
+  <div class="form-group input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+    <input name="consulta" id="busca" placeholder="Consultar" type="text" class="">
+	<button class="btn btn-outline-info" type="submit" id="pesquisa">Pesquisar</button>
+  </div>
+  </form>
+  
+  <!-- Espaço para a tabela que puxa os dados-->
+  <div id="tabela"></div>
+  
+  <!-- Exemplo da tabela-->
+  <div class="table-responsive table-hover table-bordered" id="tabela">
+  <table class="table">
+    <thead class="thead-info" style="background-color: 	#B0E0E6">
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Sexo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>001</th>
+      <td>Marcio</td>
+      <td>30</td>
+      <td>Masculino</td>
+    </tr>
+    <tr>
+      <th>002</th>
+      <td>Maria</td>
+      <td>19</td>
+      <td>Feminino</td>
+    </tr>
+    <tr>
+      <th>003</th>
+      <td>Jessica</td>
+      <td>47</td>
+	  <td>Feminino</td>
+    </tr>
+  </tbody>
+  <tfoot>
+        <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+        </tr>
+    </tfoot>
+  </table>
+  <div id="filteredList">
+  </div>
+</div>
+ 
+    <footer class="container">        
+      <p class="float-right"><a href="#">Voltar ao topo</a></p>
+      <p>Desenvolvido por Kidopo Soluções em Informática Médica &middot; <a target="_blank" href="https://kidopi.com.br/" >Entrar em Contato</a> &middot;</a></p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <script>
+   $('input#busca').quicksearch('table#tabela tbody tr');
+  </script>
+
+  <script>
+      $(document).ready(function() {
+    $('#tabela tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Buscar '+title+'" />' );
+    } );
+ 
+    var table = $('#tabela').DataTable({
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var that = this;
+ 
+                $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+        }
+    });
+ 
+} );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  background-color: #F0F8FF;
+}
+
+.container {
+  max-width: 960px;
+  position: bottom;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  background-color: #F0F8FF;
+}
+
+main{
+  background-color: #F0F8FF;	
+}
+
+.topo section{
+	background-color: #F0F8FF;
+}
+
+.fixed-top a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.fixed-top a:hover{
+    font-weight: bolder;
+	background: #B0E0E6;
+	transition: 0.7s;
+}

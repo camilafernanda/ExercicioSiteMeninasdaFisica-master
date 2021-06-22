@@ -1,0 +1,24 @@
+(function($){
+	
+	//Quando o site terminar de carregar
+   $(document).ready(function(){
+	  
+	  //Quando passarmos o mouse em cima da imagem
+	  $('ul.lista-imagens li img').hover(function(){
+
+	   //Escureceremos todas as outras imagens da lista-imagens
+	    $('ul.lista-imagens li img').not(this).fadeTo('fast', 0.3);      
+
+       }, function(){
+
+    // Todas as imagens voltam ao seu estado original
+        $('ul.lista-imagens li img').fadeTo('fast',1.0);
+
+
+	  });	   
+	   
+   })
+	
+	
+	
+})(jQuery);

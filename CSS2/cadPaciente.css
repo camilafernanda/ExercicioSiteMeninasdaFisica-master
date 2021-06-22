@@ -1,0 +1,76 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  background-color: #F0F8FF;
+}
+
+form{
+	padding-top: 0rem;
+    padding-bottom: 3rem;
+	padding-left: 5rem;
+	display: block
+}
+
+.form-groupid input{
+	width: 200px;
+	padding-left: 5rem;
+}
+
+.form-groupnome input, label{
+	width: 200px;
+	padding-left: 2rem;
+}
+
+.form-groupidade input{
+	width: 200px;
+	padding-left: 5rem;
+}
+
+.form-groupsexo input{
+	width: 100px;
+	padding-left: 5rem;
+}
+
+.form-groupcheck input{
+	padding-left: 0rem;
+	padding-right: 2rem;
+}
+
+.form-groupcheck label{
+	padding-left: 0rem;
+	padding-right: 0rem;
+	width: 500px;
+	padding-bottom: 1rem;
+} 
+
+.form-groupidade placeholder{
+	position:left;
+}
+
+.container {
+  max-width: 960px;
+  position: bottom;
+  padding-top:0rem;
+  padding-bottom:0rem;
+}
+
+.groupbutton button, a{
+	padding-left: 1rem;
+}
+
+.topo section{
+	background-color: #F0F8FF;
+	padding-bottom: 0rem;
+}
+
+.fixed-top a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.fixed-top a:hover{
+    font-weight: bolder;
+	background: #B0E0E6;
+	transition: 0.7s;
+}

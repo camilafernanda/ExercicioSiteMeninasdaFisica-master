@@ -1,0 +1,63 @@
+body {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: #5a5a5a;
+  background-color: #F0F8FF;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  position: bottom;
+  padding-top:0rem;
+  padding-bottom:0rem;
+}
+
+.topo section{
+	background-color: #F0F8FF;
+	padding-bottom: 0rem;
+}
+
+.pesquisa{
+	padding-top: 0rem;
+	padding-bottom: 1rem;
+    position:center;	
+}
+
+.pesquisa input{
+	width: 250xp;
+	padding-left: 1 rem;
+	position:center;
+}
+
+.table{
+	padding-top: 0rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.fixed-top a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.fixed-top a:hover{
+    font-weight: bolder;
+	background: #B0E0E6;
+	transition: 0.7s;
+}
+
+.busca{
+	background-color: #F0F8FF;
+	padding-left: 1rem;
+}
+
+.busca input{
+	width: 300px;
+	padding-right: 2rem;
+}
+
+.busca button{
+padding-left: 1rem;
+}
